@@ -86,13 +86,14 @@ export function MobilePanel({ setContent, showContent }: any) {
               setPanel(false);
             }}
           >
-            <CloseIcon />
+            <CloseIcon style={{ height: "3rem", width: "3rem", color:"aliceblue" }}/>
           </div>
+          <div className=" pt-10">
           <SidePanel
             setContent={setContent}
             showContent={showContent}
             setPanel={setPanel}
-          />
+          /></div>
         </div>
       </div>
 

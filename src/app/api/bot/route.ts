@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
 
     try {
         const url = process.env.BACKEND_PATH!
-        const infoData = await axios.get(`${url}/controlbot/info`)
+        const infoData = await axios.get(`${url}/telegramclient/info`)
         const botInfo = infoData.data
         const filterData = {
             botid:botInfo.info.id,
@@ -27,7 +27,7 @@ export async function PUT(req: NextRequest){
         const reqBody = await req.json();
         const {prop,value} = reqBody
         const url = process.env.BACKEND_PATH!
-        const infoData = await axios.put(`${url}/controlbot/update/${prop}`, {value})
+        const infoData = await axios.put(`${url}/telegramclient/update/${prop}`, {value})
         const msg = infoData.data.message
         if(msg === 'ok'){
             return NextResponse.json({message:msg},{status:200})
