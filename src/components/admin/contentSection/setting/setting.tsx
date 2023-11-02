@@ -14,8 +14,11 @@ import axios from "axios";
 import { useState } from "react";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import toast from "react-hot-toast";
+import { useSession } from "next-auth/react";
 
 export default function Settings() {
+  const session = useSession();
+  const [name, setName] = useState(session.data?.user?.name || "Admin")
   const matches = useMediaQuery("(max-width:768px)");
   const [showAccessToken, setAccessToken] = useState(false);
   const [showGeneratedToken, setGeneratedToken] = useState(false);
@@ -68,6 +71,7 @@ export default function Settings() {
     try {
       const sentBody = {
         prop: "generatetoken",
+        name: name
       };
 
       const generateToken = await axios.post("/api/bot/token", sentBody);
