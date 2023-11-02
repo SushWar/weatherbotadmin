@@ -11,7 +11,7 @@ export default function TopBar() {
     return (
       <div className="pl-[26%] select-none">
         <div className="px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-semibold px-3">
+          <div className="text-2xl font-semibold px-3 text-cyan-800">
             Hello {name},{" "}
             <WavingHandIcon fontSize="large" style={{ color: "orange" }} />
           </div>

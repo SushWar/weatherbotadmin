@@ -43,12 +43,12 @@ export default function Dashboard() {
                   <CustomCircularProgress value = {data.length}/>
                 </div>
                 <div className=" absolute top-0 h-[10rem] w-[10rem] flex justify-center items-center">
-                  <PeopleAltIcon style={{ width: "2rem", height: "2rem" }} />
+                  <PeopleAltIcon style={{ width: "2rem", height: "2rem", color:"darkslateblue" }} />
                 </div>
               </div>
               <div className=" text-center">
-                <div className="text-[#8A92A6]">Total Subscribers</div>
-                <div>{data.length}</div>
+                <div className="text-[#636977]">Total Subscribers</div>
+                <div className=" text-black">{data.length}</div>
               </div>
             </div>
           </div>

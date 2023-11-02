@@ -107,7 +107,7 @@ export function MobilePanel({ setContent, showContent }: any) {
             setPanel(true);
           }}
         >
-          <MenuOpenIcon style={{ height: "4rem", width: "2rem" }} />
+          <MenuOpenIcon style={{ height: "3rem", width: "3rem", color:"black" }} />
         </span>
       </div>
     </div>

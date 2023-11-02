@@ -49,13 +49,13 @@ export default function Subscribers({}: any) {
     return (
       <div id="subscriber" className=" px-4">
         <div className=" text-center pb-12">
-          <div className=" pb-4 animate-pulse"><h2> Send Custom message to all the Subscriber</h2></div>
+          <div className=" pb-4 animate-pulse text-[#005d95]"><h2> Send Custom message to all the Subscriber</h2></div>
           <Button variant="outlined" onClick={handleClickOpen}><TelegramIcon/></Button>
           <MessageBox open={open} handleClose={handleClose}/>
         </div>
         <div className=" flex justify-center ">
           <table>
-            <thead className="">
+            <thead className=" text-black font-extrabold">
               <tr>
                 <th className=" border-solid border-black border tablet:w-[10rem] laptop:w-[12rem] desktop1:w-[13rem]">
                   <span className=" px-5 py-3">Telegram ID</span>
@@ -116,10 +116,10 @@ function UserList({ item, refetch }: any) {
 
   return (
     <>
-      <td className="border-solid border-black border text-center py-2">
+      <td className="border-solid border-black border text-center py-2 text-[#4976c7]">
         {item.telegramId}
       </td>
-      <td className="border-solid border-black border text-center py-2">
+      <td className="border-solid border-black border text-center py-2 text-[#4976c7]">
         {item.firstName} {item.lastName}
       </td>
       <td

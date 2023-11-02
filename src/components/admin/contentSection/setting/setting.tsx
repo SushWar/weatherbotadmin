@@ -90,9 +90,9 @@ export default function Settings() {
         <div className=" bg-white rounded-3xl mx-4">
           <div className=" m-4 py-5 px-4 ">
             <div className="flex justify-center">
-              <Avatar sx={{ bgcolor: blueGrey[500] }}>{data.name[0]}</Avatar>
+              <Avatar sx={{ bgcolor: blueGrey[500] }} style={{height:"6rem", width:"6rem", fontSize:"3rem"}}>{data.name[0]}</Avatar>
             </div>
-            <div className="py-4 text-center italic">@{data.username}</div>
+            <div className="py-4 text-center italic text-red-950 text-lg">@{data.username}</div>
             <EditField
               name={"name"}
               value={data.name}
