@@ -11,11 +11,8 @@ export async function POST(req: NextRequest) {
        
         const callToken = await axios.post(`${url}/telegramclient/${prop}`,reqBody)
         
-        if(callToken.data.token.length > 0){
-            return NextResponse.json({data:callToken.data},{status:200})
-        }
-
-        return NextResponse.json({data:null},{status:401})
+        return NextResponse.json({data:callToken.data},{status:200})
+        
         
     } catch (error) {
         return NextResponse.json({data:null},{status:404})

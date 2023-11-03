@@ -54,7 +54,7 @@ export default function Settings() {
       };
 
       const fetchToken = await axios.post("/api/bot/token", sentBody);
-
+      
       if (fetchToken.status === 200) {
         setAccessToken(true);
         setToken(fetchToken.data.data.token);
@@ -78,7 +78,7 @@ export default function Settings() {
 
       if (generateToken.status === 200) {
         setGeneratedToken(true);
-        setNewToken(generateToken.data.data.token);
+        setNewToken(generateToken.data.data.token.token);
         toast.success("Success");
       } else {
         toast.error("Check your connection !!");
