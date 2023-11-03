@@ -37,10 +37,3 @@ export async function PUT(req: NextRequest){
         return NextResponse.json({message:'Please try again after some time !!'},{status:404})
     }
 }
-
-export default async function handler(req:NextRequest) {
-    console.log('Cron job')
-    const url = process.env.BACKEND_PATH!
-    const infoData = await axios.get(`${url}/telegramclient/info`)
-    return NextResponse.json({message:"active"},{status:200})
-}
