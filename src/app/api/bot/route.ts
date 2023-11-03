@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
 export async function GET(req: NextRequest) {
-    
+    console.log('Cron job')
     try {
         const url = process.env.BACKEND_PATH!
         const infoData = await axios.get(`${url}/telegramclient/info`)
