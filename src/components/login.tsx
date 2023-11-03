@@ -109,12 +109,12 @@ export default function LoginPage() {
               <div className=" pt-10 text-center">
                 <Button
                   variant="contained"
-                  style={{ backgroundColor: "black" }}
+                  style={{ backgroundColor: "slategray", color:"white" }}
                   type="submit"
                   onClick={async (e) => {
                     loginSubmitBtn(e)
                   }}
-                  disabled={disable}
+                  disabled={true}
                 >
                   Login Button
                 </Button>
